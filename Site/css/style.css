@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+select,
+input {
+    font: inherit;
+}
+
+/* VARIÁVEIS */
+:root {
+    --bg-main: #0b0f1a;
+    --bg-secondary: rgba(18, 24, 38, 0.85);
+    --surface: rgba(255, 255, 255, 0.04);
+
+    --text-main: #f3f7ff;
+    --text-soft: #b9c4d6;
+    --text-muted: #7d8aa3;
+
+    --primary: #2bb3ff;
+    --primary-soft: rgba(43, 179, 255, 0.18);
+    --border: rgba(255, 255, 255, 0.1);
+
+    --shadow: 0 0 20px rgba(43, 179, 255, 0.12);
+    --radius: 18px;
+
+    --font-main: "Zen Dots", sans-serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    --container: 1280px;
+    --header-height: 90px;
+}
+
+/* BASE */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        linear-gradient(rgba(7, 11, 20, 0.92), rgba(7, 11, 20, 0.96)),
+        radial-gradient(circle at top, rgba(43, 179, 255, 0.08), transparent 35%);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* padrão hexagonal/futurista leve */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 20% 15%, rgba(43, 179, 255, 0.12), transparent 25%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* CONTAINER GERAL */
+.header,
+main,
+.footer {
+    width: min(100%, var(--container));
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: var(--header-height);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    padding: 0 32px;
+    z-index: 1000;
+
+    background: rgba(8, 12, 22, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: none;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow);
+}
+
+/* LOGO */
+.logo img {
+    width: 90px;
+    height: auto;
+}
+
+/* NAV */
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav a {
+    position: relative;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    color: var(--text-main);
+    transition: color 0.25s ease;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    transition: width 0.25s ease;
+}
+
+.nav a:hover {
+    color: var(--primary);
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* LANG */
+.lang select {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.lang select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(43, 179, 255, 0.2);
+}
+
+/* INDICADOR LATERAL */
+.page-indicator {
+    position: fixed;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    letter-spacing: 0.25em;
+    color: var(--primary);
+    opacity: 0.7;
+
+    text-shadow:
+        0 0 6px rgba(43, 179, 255, 0.5),
+        0 0 14px rgba(43, 179, 255, 0.3);
+
+    z-index: 900;
+}
+
+/* MAIN */
+main {
+    padding: calc(var(--header-height) + 70px) 32px 80px;
+}
+
+/* SEÇÕES */
+section {
+    margin-bottom: 120px;
+}
+
+/* STORY */
+.story {
+    max-width: 900px;
+    padding-top: 40px;
+}
+
+.story h1 {
+    font-family: var(--font-main);
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-bottom: 28px;
+    color: var(--text-main);
+}
+
+.story p {
+    max-width: 760px;
+    font-size: 1.08rem;
+    color: var(--text-soft);
+    margin-bottom: 18px;
+}
+
+/* caso você transforme a frase de impacto em tagline */
+.story .tagline {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+/* CHARACTERS */
+.characters {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.character {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 36px;
+    align-items: center;
+
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(6px);
+}
+
+.character > img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.char-info {
+    position: relative;
+    padding-right: 70px;
+}
+
+.char-info h2 {
+    font-family: var(--font-main);
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+    color: var(--text-main);
+}
+
+.char-info p {
+    color: var(--text-soft);
+    font-size: 1rem;
+    max-width: 680px;
+}
+
+/* TEXTO JAPONÊS VERTICAL */
+.jp-vertical {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    color: var(--primary);
+    opacity: 0.75;
+}
+
+/* SOBRE */
+.sobre {
+    max-width: 900px;
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.sobre h2 {
+    font-family: var(--font-main);
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+    color: var(--text-main);
+}
+
+.sobre p {
+    color: var(--text-soft);
+    font-size: 1.05rem;
+}
+
+/* FOOTER */
+.footer {
+    padding: 28px 32px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.95rem;
+}
