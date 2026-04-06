@@ -27,9 +27,25 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --primary: #00ffff;
+    --secondary: #ff004c;
+    --primary-glow: rgba(0, 255, 255, 0.6);
+    --secondary-glow: rgba(255, 42, 42, 0.6);
+    --bg-image: url("../images/lightbackground2.png");
+}
+
+.dark-theme {
+    --primary: #ff004c;
+    --secondary: #00ffff;
+    --primary-glow: rgba(255, 42, 42, 0.6);
+    --secondary-glow: rgba(0, 255, 255, 0.6);
+    --bg-image: url("../images/darkbackground.png");
+}
+
 body {
     /*BACKGROUND*/
-    background-image: url("../images/lightbackground2.png");
+    background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +68,7 @@ body {
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(0, 255, 255, 0.3);
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.12);
+            box-shadow: 0 0 15px var(--primary-glow);
 
             z-index: 1000;
         }
@@ -65,11 +81,11 @@ body {
             width: 100%;
             height: 2px;
 
-            background: #00ffff;
+            background: var(--primary);
             box-shadow: 
-                0 0 5px #00ffff,
-                0 0 10px #00ffff,
-                0 0 20px #00ffff;
+                0 0 5px var(--primary),
+                0 0 10px var(--primary),
+                0 0 20px var(--primary);
         }
 
         .logo img {
@@ -96,7 +112,7 @@ body {
             display: block;
             padding: 10px 20px;
 
-            color: #00ffff;
+            color: var(--primary);
             text-decoration: none;
             font-family: 'Zen Dots', sans-serif;
 
@@ -109,18 +125,18 @@ body {
             transition: 0.3s;
 
              box-shadow:
-                0 0 5px #00ffff,
+                0 0 5px var(--primary),
                 0 0 10px rgba(0, 255, 255, 0.6),
                 inset 0 0 5px rgba(0, 255, 255, 0.4);
         }
 
         .nav a:hover {
             color: #000;
-            background: #00ffff;
+            background: var(--primary);
 
             box-shadow:
-                0 0 10px #00ffff,
-                0 0 20px #00ffff,
+                0 0 10px var(--primary),
+                0 0 20px var(--primary),
                 0 0 40px rgba(0, 255, 255, 0.6);
         }
 
@@ -132,29 +148,37 @@ body {
             width: 80%;
             height: 1px;
 
-            background: linear-gradient(to right, transparent, #00ffff, transparent);
+            background: linear-gradient(to right, transparent, var(--primary), transparent);
             opacity: 0.5;
         }
 
         .nav a.play {
-            color: #ff004c;
-            border-color: #ff004c;
+            color: var(--secondary);
+            border-color: var(--secondary);
             box-shadow:
-                0 0 5px #ff004c,
-                0 0 10px rgba(255, 42, 42, 0.6),
-                inset 0 0 5px rgba(255, 42, 42, 0.4);
+                0 0 5px var(--secondary),
+                0 0 10px var(--secondary-glow),
+                inset 0 0 5px var(--secondary-glow);
             transform: scale(1.1); /*BOTÃO CTA, TALVEZ EU ALTERE DEPOIS*/
             font-weight: bold;
         }
 
         .nav a.play:hover {
-            background: #ff004c;
+            background: var(--secondary);
             color: #000;
 
             box-shadow:
-                0 0 10px #ff004c,
-                0 0 20px #ff004c,
-                0 0 40px rgba(255, 42, 42, 0.9);
+                0 0 10px var(--secondary),
+                0 0 20px var(--secondary),
+                0 0 40px var(--secondary-glow);
+        }
+
+        #theme-toggle {
+            display: inline-flex;
+            align-items: center; /* Centers icon and text vertically */
+            gap: 8px;            /* Adds space between icon and text */
+            padding: 10px 15px;
+            cursor: pointer;
         }
 
         .lang {
@@ -169,15 +193,15 @@ body {
 
             padding: 10px 35px 10px 18px;
             background: rgba(0, 0, 0, 0.2);
-            color: #00ffff;
-            border: 1px solid #00ffff;
+            color: var(--primary);
+            border: 1px solid var(--primary);
             font-family: 'Zen Dots', sans-serif;
             font-size: 14px;
             cursor: pointer;
             outline: none;
 
             box-shadow:
-                0 0 5px #00ffff,
+                0 0 5px var(--primary),
                 0 0 10px rgba(0, 255, 255, 0.4),
                 inset 0 0 5px rgba(0, 255, 255, 0.3);
 
@@ -185,11 +209,11 @@ body {
         }
 
         .lang select:hover, .lang select:focus {
-            background: #00ffff;
+            background: var(--primary);
             color: #000;
 
             box-shadow:
-                0 0 10px #00ffff,
+                0 0 10px var(--primary),
                 0 0 20px rgba(0, 255, 255, 0.7);
         }
 
@@ -199,7 +223,7 @@ body {
             right: 12px;
             top: 50%;
             transform: translateY(-50%);
-            color: #00ffff;
+            color: var(--primary);
             font-size: 12px;
             pointer-events: none;
         }
@@ -211,7 +235,7 @@ body {
         }
 
         .globe {
-            color: #00ffff;
+            color: var(--primary);
             font-size: 24px;
 
             text-shadow:
@@ -230,16 +254,16 @@ body {
             font-family: 'Zen Dots', sans-serif;
             font-size: 14px;
             letter-spacing: 4px;
-            color: #00ffff;
+            color: var(--primary);
             font-weight: bold;
 
             z-index: 999;
             padding: 10px 5px;
 
             background: rgba(0, 0, 0, 0.2);
-            border: 1px solid #00ffff;
+            border: 1px solid var(--primary);
             box-shadow:
-                0 0 5px #00ffff,
+                0 0 5px var(--primary),
                 0 0 10px rgba(0, 255, 255, 0.5),
                 inset 0 0 5px rgba(0, 255, 255, 0.3);
             opacity: 0.7;
@@ -299,16 +323,16 @@ body {
         font-size: 1rem;
         letter-spacing: 1px;
 
-        color: #ff004c;
+        color: var(--secondary);
         text-decoration: none;
 
         background: rgba(0, 0, 0, 0.2);
-        border: 1px solid #ff004c;
+        border: 1px solid var(--secondary);
 
         clip-path: polygon(0 0, 92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%);
 
         box-shadow:
-            0 0 6px #ff004c,
+            0 0 6px var(--secondary),
             0 0 12px rgba(255, 0, 76, 0.5),
             inset 0 0 6px rgba(255, 0, 76, 0.4);
 
@@ -318,12 +342,12 @@ body {
     }
 
     main .play:hover {
-        background: #ff004c;
+        background: var(--secondary);
         color: #000;
 
         box-shadow:
-            0 0 10px #ff004c,
-            0 0 20px #ff004c,
+            0 0 10px var(--secondary),
+            0 0 20px var(--secondary),
             0 0 40px rgba(255, 0, 76, 0.9);
     }
 
@@ -381,7 +405,7 @@ body {
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
 
-        border: 1px solid #ff004c;
+        border: 1px solid var(--secondary);
         box-shadow:
             0 0 10px rgba(0, 255, 255, 0.10),
             inset 0 0 8px rgba(255, 255, 255, 0.06);
@@ -431,7 +455,7 @@ body {
         margin: 0 0 16px;
         font-family: 'Zen Dots', sans-serif;
         font-size: 1.7rem;
-        color: #ff004c;
+        color: var(--secondary);
         text-shadow: 0 0 8px rgba(0, 217, 255, 0.20);
     }
 
@@ -469,7 +493,7 @@ body {
         font-family: 'Zen Dots', sans-serif;
         font-size: 0.8rem;
         letter-spacing: 3px;
-        color: #ff004c;
+        color: var(--secondary);
 
         text-shadow: 0 0 8px rgba(0, 217, 255, 0.18);
     }
@@ -521,7 +545,7 @@ body {
     -webkit-backdrop-filter: blur(12px);
 
     border-top: 1px solid rgba(0, 255, 255, 0.45);
-    box-shadow: 0 -2px 15px rgba(0, 255, 255, 0.12);
+    box-shadow: 0 -2px 15px var(--primary-glow);
 }
 
 .footer p {
