@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,12 +25,13 @@
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Inspirações</a></li>
                 <li><a href="#">Como Jogar</a></li>
-                <li><a href="#">Jogar Agora!</a></li>
+                <li><a class="play" href="#">Jogar Agora!</a></li>
             </ul>
         </nav>
 
         <!-- SELETOR DE IDIOMA -->
         <div class="lang">
+            <span class="globe">🌐</span>
             <select>
                 <option>PT-BR</option>
                 <option>EN</option>
@@ -51,11 +56,14 @@
             tecnologias de drones e androides militares, desenvolvidos através do 
             Projeto Seraph, garantiram controle absoluto sobre a metrópole.
             </p>
+            <br></br>
             <p>Mas esse domínio está prestes a desmoronar. Uma de suas unidades de 
             combate, YU-N4, se libertou do controle da corporação e agora busca libertar
             sua irmã, XU-N5. No entanto, ela não parece querer ser salva...
             </p>
         </section>
+
+        <p><a class="play" href="#">Jogar Agora!</a></p>
 
         <!-- PERSONAGENS -->
         <section class="characters">
@@ -70,12 +78,12 @@
                     para se libertar do controle da corporação. Após fugir de Eden Prime, 
                     ela retorna com um único objetivo: salvar sua irmã, XU-N5.
                     </p>
-                    <div class="jp-vertical">エアー・コンバット・ユニット・YU-N4</div>
+                    <div class="jp-vertical">エアー・コンバット・ユニット・YU|N4</div>
                 </div>
             </article>
             <!-- XU-N5 -->
-            <article class="character"><img src="images/XU-N5.png" alt="XU-N5">
-                <div class="char-info">
+            <article class="character-xu"><img src="images/XU-N5.png" alt="XU-N5">
+                <div class="char-xu">
                     <h2>XU-N5</h2>
                     <p>Unidade de combate pesada com alto poder destrutivo, considerada 
                     um modelo superior à YU-N4. Diferente de sua irmã, XU-N5 não 
@@ -83,13 +91,13 @@
                     devem cumprir seu dever sem hesitação. Leal à corporação, recebeu 
                     a ordem de eliminar YU-N4 ao primeiro sinal de contato.
                     </p>
-                    <div class="jp-vertical">エアー・コンバット・ユニット・XU-N5</div>
+                    <div class="jp-vertical-xu">エアー・コンバット・ユニット・XU|N5</div>
                 </div>
             </article>
         </section>
 
         <!-- SOBRE O JOGO -->
-         <section class="sobre">
+         <section class="about">
             <h2>Sobre o Jogo:</h2>
             <p>Seraph Project é um Shoot'em Up/Bullet Hell em um universo cyberpunk.
             Controle Yuna (YU-N4), uma unidade rebelde, e enfrente sua irmã XU-N5 em combates 
@@ -99,8 +107,8 @@
      </main>  
 
      <footer class="footer">
-        <p>João Pedro Trevisan, 2026</p>
-        <p>Engenharia de Software, Integrado</p>
+        <p>João Pedro Trevisan  2026</p>
+        <p>Engenharia de Software - Integrado</p>
      </footer>
 </body>
 </html>
