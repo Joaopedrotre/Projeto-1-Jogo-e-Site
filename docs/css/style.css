@@ -39,7 +39,7 @@ input {
 ========================= */
 :root {
     /* Core colors */
-    --color-primary: #00ffff;
+    --color-primary: rgb(0, 225, 255)/*#00ffff*/;
     --color-secondary: #ff004c;
     --color-text: #1f2f46;
     --color-black: #000000;
@@ -60,9 +60,9 @@ input {
     --space-xl: 80px;
 
     /* Glass backgrounds */
-    --glass-bg: rgba(255, 255, 255, 0.10);
-    --glass-bg-soft: rgba(255, 255, 255, 0.08);
-    --glass-bg-dark: rgba(0, 0, 0, 0.20);
+    --glass-bg: rgba(255, 255, 255, 0.10); /* PAINEIS */
+    --glass-bg-soft: rgba(255, 255, 255, 0.08); /* HEADER */
+    --glass-bg-dark: rgb(0, 0, 0, 0.8); /* NAV */
 
     /* Blur */
     --glass-blur: 10px;
@@ -465,14 +465,13 @@ main {
     text-orientation: upright;
     padding: 10px 5px;
     font-family: var(--font-title);
-    font-size: 14px;
+    font-size: 28px;
     letter-spacing: 4px;
     color: var(--color-primary);
     font-weight: bold;
     background: var(--glass-bg-dark);
     border: 1px solid var(--color-primary);
     box-shadow: var(--shadow-primary);
-    opacity: 0.7;
     z-index: 999;
     clip-path: var(--clip-page-indicator);
 }
@@ -545,14 +544,16 @@ main .play:hover {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 40px;
+    gap: 100px;
     margin-bottom: 80px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .character,
 .character-xu {
     position: relative;
-    width: 420px;
+    width: 520px;
     min-height: 760px;
     padding: 30px 30px 25px;
     display: flex;
@@ -575,9 +576,13 @@ main .play:hover {
 
 .character img,
 .character-xu img {
-    width: 260px;
+    width: 360px;
     margin-bottom: 16px;
     filter: var(--shadow-logo-image);
+}
+
+.character-xu img {
+    transform: scaleX(-1);
 }
 
 .char-info,
@@ -613,13 +618,13 @@ main .play:hover {
 .jp-vertical,
 .jp-vertical-xu {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -168%;
+    right: -5px;
     writing-mode: vertical-rl;
     text-orientation: upright;
     font-family: var(--font-title);
-    font-size: 0.8rem;
-    letter-spacing: 3px;
+    font-size: 1.3rem;
+    letter-spacing: 4px;
 }
 
 .jp-vertical {
