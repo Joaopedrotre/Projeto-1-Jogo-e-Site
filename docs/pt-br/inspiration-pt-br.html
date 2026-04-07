@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seraph Project</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/Logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- HEADER FIXO -->
+    <header class="header">
+        <div class="logo"><img src="../images/Logo.png" alt="Logo"></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="inspiration-pt-br.html">Inspirações</a></li>
+                <li><a href="#">Como Jogar</a></li>
+                <li><a class="play" href="#">Jogar Agora!</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle"><i class="fa-solid fa-circle-half-stroke">Tema</i></button>
+
+        <script>
+            const themeToggle = document.getElementById("theme-toggle");
+
+            themeToggle.addEventListener("click", function () {
+                document.body.classList.toggle("dark-theme");
+            });
+        </script>
+
+        <!-- SELETOR DE IDIOMA -->
+        <div class="lang">
+            <span class="globe">🌐</span>
+            <select>
+                <option>PT-BR</option>
+                <option>ENGLISH</option>
+                <option>日本語</option>
+            </select>
+        </div>
+    </header>
+    
+    <!-- INDICADOR DE PÁGINA, JAPONÊS -->
+    <div class="page-indicator">
+        インスピレーション
+    </div>
+
+    <!-- INTRODUÇÃO -->
+     <main>
+        <section class="hero">
+            <h1>Touhou Project</h1>
+            <p>Touhou Project é uma famosa franquia japonesa de jogos independentes do gênero bullet hell, conhecida por seus padrões complexos de projéteis e alto nível de dificuldade.</p>
+            <br>
+            <p>A franquia ganhou enorme popularidade não apenas pelos jogos, mas principalmente pela sua cultura de fãs extremamente ativa. Um dos maiores diferenciais de Touhou é sua comunidade: fãs produzem uma enorme quantidade de conteúdos derivados (doujin), como músicas remixadas, animações, mangás e jogos feitos por fãs. Isso transformou Touhou em um fenômeno cultural no Japão e em nichos ao redor do mundo, influenciando diversos jogos indie</p>  
+        </section>
+     </main>
+     <footer class="footer">
+        <p>João Pedro Trevisan  2026</p>
+        <p>Engenharia de Software - Integrado</p>
+     </footer>
+</body>
+</html>
