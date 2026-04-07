@@ -39,7 +39,7 @@ input {
 ========================= */
 :root {
     /* Core colors */
-    --color-primary: rgb(0, 225, 255)/*#00ffff*/;
+    --color-primary: rgb(0, 225, 255)  /*#00ffff: cor original, muito clara */;
     --color-secondary: #ff004c;
     --color-text: #1f2f46;
     --color-black: #000000;
@@ -383,7 +383,8 @@ main {
     color: var(--color-secondary);
     border-color: var(--color-secondary);
     box-shadow: var(--shadow-secondary);
-    transform: scale(1.1);
+    margin-left: 20px;
+    transform: scale(1.2);
     font-weight: bold;
 }
 
@@ -479,7 +480,7 @@ main {
 /* =========================
    STORY / ABOUT
 ========================= */
-.story,
+.hero,
 .about {
     max-width: 1000px;
     margin: 80px auto;
@@ -493,7 +494,7 @@ main {
     clip-path: var(--clip-panel);
 }
 
-.story h1,
+.hero h1,
 .about h2 {
     margin-bottom: 20px;
     font-family: var(--font-title);
@@ -503,7 +504,7 @@ main {
     text-shadow: var(--text-shadow-primary);
 }
 
-.story p,
+.hero p,
 .about p {
     font-size: 1.05rem;
     line-height: 1.8;
@@ -567,11 +568,11 @@ main .play:hover {
 }
 
 .character {
-    border: 1px solid var(--border-primary-soft);
+    border: 1px solid rgb(0, 255, 255, 0.30);
 }
 
 .character-xu {
-    border: 1px solid var(--border-secondary);
+    border: 1px solid rgba(255, 0, 76, 0.45);
 }
 
 .character img,
@@ -600,12 +601,12 @@ main .play:hover {
 }
 
 .char-info h2 {
-    color: var(--color-primary);
+    color: rgb(0, 225, 255);
     text-shadow: var(--text-shadow-primary);
 }
 
 .char-xu h2 {
-    color: var(--color-secondary);
+    color: #ff004c;
     text-shadow: var(--text-shadow-secondary);
 }
 
@@ -628,12 +629,12 @@ main .play:hover {
 }
 
 .jp-vertical {
-    color: var(--color-primary);
+    color: rgb(0, 225, 255);
     text-shadow: var(--text-shadow-primary);
 }
 
 .jp-vertical-xu {
-    color: var(--color-secondary);
+    color: #ff004c;
     text-shadow: var(--text-shadow-secondary);
 }
 
@@ -702,17 +703,17 @@ main .play:hover {
         display: none;
     }
 
-    .story,
+    .hero,
     .about {
         padding: 25px 20px;
     }
 
-    .story h1,
+    .hero h1,
     .about h2 {
         font-size: 1.4rem;
     }
 
-    .story p,
+    .hero p,
     .about p {
         font-size: 0.95rem;
     }
