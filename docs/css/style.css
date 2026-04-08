@@ -39,7 +39,7 @@ input {
 ========================= */
 :root {
     /* Core colors */
-    --color-primary: rgb(0, 225, 255)  /*#00ffff: cor original, muito clara */;
+    --color-primary: #00ffff  /*#00ffff: cor original, muito clara */;
     --color-secondary: #ff004c;
     --color-text: #1f2f46;
     --color-black: #000000;
@@ -69,9 +69,9 @@ input {
     --glass-blur-strong: 12px;
 
     /* Borders */
-    --border-primary: rgba(0, 255, 255, 0.35);
+    --border-primary: rgba(0, 255, 255, 0.60);
     --border-primary-soft: rgba(0, 255, 255, 0.30);
-    --border-primary-strong: rgba(0, 255, 255, 0.40);
+    --border-primary-strong: rgba(0, 255, 255, 0.80);
     --border-secondary: rgba(255, 0, 76, 0.45);
     --border-footer: rgba(0, 255, 255, 0.45);
 
@@ -153,7 +153,7 @@ input {
 ========================= */
 body.dark-theme {
     --color-primary: #ff004c;
-    --color-secondary: #00ffff;
+    --color-secondary: #00C0D9 /*#00ffff*/;
     --color-text: #ffffff;
     --bg-image: url("../images/darkbackground2.png");
 
