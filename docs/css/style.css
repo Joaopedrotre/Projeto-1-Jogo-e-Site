@@ -470,18 +470,19 @@ main {
     letter-spacing: 4px;
     color: var(--color-primary);
     font-weight: bold;
-    background: var(--glass-bg-dark);
-    border: 1px solid var(--color-primary);
-    box-shadow: var(--shadow-primary);
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 2px solid var(--border-primary);
+    box-shadow: var(--shadow-panel);
     z-index: 999;
     clip-path: var(--clip-page-indicator);
 }
 
 /* =========================
-   STORY / ABOUT
+   STORY
 ========================= */
-.hero,
-.about {
+.hero {
     max-width: 1000px;
     margin: 80px auto;
     padding: 35px 40px;
@@ -494,22 +495,46 @@ main {
     clip-path: var(--clip-panel);
 }
 
-.hero h1,
-.about h2 {
+.hero h1, h2 {
     margin-bottom: 20px;
     font-family: var(--font-title);
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     line-height: 1.4;
     color: var(--color-primary);
     text-shadow: var(--text-shadow-primary);
 }
 
-.hero p,
-.about p {
+.hero p {
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--color-text);
     font-family: var(--font-body);
+    font-size: 1.2rem;
+}
+
+.touhou {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.touhou img {
+    height: 220px;
+    object-fit: cover;
+    margin: 25px;
+}
+
+.yugioh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yugioh img {
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+    margin: 25px;
 }
 
 main .play {
@@ -614,12 +639,13 @@ main .play:hover {
 .char-xu p {
     line-height: 1.8;
     color: var(--color-text);
+    font-size: 1.2rem;
 }
 
 .jp-vertical,
 .jp-vertical-xu {
     position: absolute;
-    top: -168%;
+    top: -128%;
     right: -5px;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -703,18 +729,15 @@ main .play:hover {
         display: none;
     }
 
-    .hero,
-    .about {
+    .hero {
         padding: 25px 20px;
     }
 
-    .hero h1,
-    .about h2 {
+    .hero h1, h2 {
         font-size: 1.4rem;
     }
 
-    .hero p,
-    .about p {
+    .hero p {
         font-size: 0.95rem;
     }
 
