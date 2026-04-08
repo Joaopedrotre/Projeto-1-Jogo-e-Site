@@ -537,6 +537,40 @@ main {
     margin: 25px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.container .hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container .hero img {
+    width: 360px;
+    height: 360px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.howtoplay {
+    flex: 1;
+}
+
+.howtoplay h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.howtoplay p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 main .play {
     display: flex;
     justify-content: center;
