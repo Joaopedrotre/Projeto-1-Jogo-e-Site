@@ -394,7 +394,7 @@ main {
     box-shadow: var(--shadow-secondary-strong);
 }
 
-#theme-toggle {
+/* #theme-toggle {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -403,6 +403,49 @@ main {
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
     box-shadow: var(--shadow-primary);
+} BOTÃO TEMA ANTIGO */
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    display: block;
+    padding: 10px 20px;
+    font-family: var(--font-title);
+    color: var(--color-primary);
+    border: 1px solid var(--border-primary-strong);
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    clip-path: var(--clip-nav);
+    transition: 0.3s;
+    box-shadow: var(--shadow-primary);
+}
+
+#theme-toggle:hover {
+    color: var(--color-black);
+    background: var(--color-primary);
+    box-shadow: var(--shadow-primary-strong);
+}
+
+#theme-toggle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+    opacity: 0.5;
 }
 
 .lang {
@@ -600,7 +643,8 @@ main .play:hover {
 /* =========================
    CHARACTERS
 ========================= */
-.characters {
+
+.sensible {
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -608,6 +652,7 @@ main .play:hover {
     margin-bottom: 80px;
     max-width: 1300px;
     margin: 0 auto;
+    transition: 0.3s;
 }
 
 .character,
@@ -781,7 +826,7 @@ main .play:hover {
         font-size: 0.9rem;
     }
 
-    .characters {
+    .sensible {
         flex-direction: column;
         align-items: center;
         gap: 30px;

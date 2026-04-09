@@ -14,12 +14,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <script>
+    if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("preload-dark");
+    }
+    </script>
 </head>
 
 <body>
     <!-- HEADER FIXO -->
     <header class="header">
-        <div class="logo"><img src="../images/Logo.png" alt="Logo"></div>
+        <div class="logo"><a href="../index.html"><img src="../images/Logo.png" alt="Logo"></a></div>
         <nav class="nav">
             <ul>
                 <li><a href="../index.html">Início</a></li>
@@ -29,24 +35,17 @@
             </ul>
         </nav>
 
-        <button id="theme-toggle"><i>Tema</i></button>
+        <div class="header-controls">
+            <button id="theme-toggle">Tema</button>
 
-        <script>
-            const themeToggle = document.getElementById("theme-toggle");
-
-            themeToggle.addEventListener("click", function () {
-                document.body.classList.toggle("dark-theme");
-            });
-        </script>
-
-        <!-- SELETOR DE IDIOMA -->
-        <div class="lang">
-            <span class="globe">🌐</span>
-            <select>
-                <option>PT-BR</option>
-                <option>ENGLISH</option>
-                <option>日本語</option>
-            </select>
+            <div class="lang">
+                <span class="globe">🌐</span>
+                <select>
+                    <option>PT-BR</option>
+                    <option>ENGLISH</option>
+                    <option>日本語</option>
+                </select>
+            </div>
         </div>
     </header>
     
@@ -66,5 +65,27 @@
         <p>João Pedro Trevisan  2026</p>
         <p>Engenharia de Software - Integrado</p>
      </footer>
+
+     <script>
+            const themeToggle = document.getElementById("theme-toggle");
+
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.body.classList.add("dark-theme");
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener("click", function () {
+                    document.body.classList.toggle("dark-theme");
+
+                    if (document.body.classList.contains("dark-theme")) {
+                        localStorage.setItem("theme", "dark");
+                    } else {
+                        localStorage.setItem("theme", "light");
+                    }
+                });
+            }
+        </script>
 </body>
 </html>
