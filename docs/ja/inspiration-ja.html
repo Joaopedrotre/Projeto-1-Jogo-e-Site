@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セラフ・プロジェクト</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/Logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <script>
+    if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("preload-dark");
+    }
+    </script>
+</head>
+
+<body>
+    <!-- HEADER FIXO -->
+    <header class="header">
+        <div class="logo"><a href="index-ja.html"><img src="../images/Logo.png" alt="Logo"></a></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index-ja.html">ホーム</a></li>
+                <li><a href="inspiration-ja.html">インスピレーション</a></li>
+                <li><a href="howtoplay-ja.html">遊び方</a></li>
+                <li><a class="play" href="play-ja.html">今すぐプレイ！</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-controls">
+            <button id="theme-toggle">テーマ</button>
+
+            <div class="lang">
+                <span class="globe">🌐</span>
+                <select onchange="location = this.value;">
+                    <option value="index-ja.html">日本語</option>
+                    <option value="../en/index-en.html">ENGLISH</option>
+                    <option value="../index.html">PT-BR</option>      
+                </select>
+            </div>
+        </div>
+    </header>
+    
+    <!-- INDICADOR DE PÁGINA, JAPONÊS -->
+    <div class="page-indicator">
+        インスピレーション
+    </div>
+
+    <!-- INTRODUÇÃO -->
+     <main>
+        <section class="hero">
+            <h1>東方Project</h1>
+            <div class="touhou">
+                <img src="../images/touhou6menu.webp" alt="Touhou menu" title="Touhou 6 menu">
+                <img src="../images/touhou-6-danmaku.gif" alt="Touhou" title="Touhou 6: Embodiment of Scarlet Devil">
+                <img src="../images/ZUN.webp" alt="ZUN" title="ZUN">
+            </div>    
+            <p>東方Projectは、弾幕ゲームというジャンルで知られる日本のインディーゲームシリーズであり、複雑な弾幕パターンと高い難易度で有名です。プレイヤーは敵を攻撃しながら、画面いっぱいに広がる「弾の雨」を避け続ける必要があり、素早い反射神経、正確な操作、そしてパターンの記憶が求められます。
+            </p>
+            <br>
+            <p>このシリーズはゲームそのものだけでなく、非常に活発なファン文化によっても大きな人気を得ました。ファンによって制作される二次創作（同人）は非常に多く、リミックス音楽、アニメーション、漫画、さらにはファンゲームまで幅広く展開されています。
+
+            公式作品は30作以上存在し、そのほとんどがシリーズの生みの親であるZUNによって開発されています。</p>  
+        </section>
+        <section class="hero">
+            <h1>遊戯王：閃刀姫（スカイ・ストライカー）</h1>
+            <div class="yugioh">
+                <img src="../images/shizuku.jpg" alt="Sky Striker Ace - Shizuku" title="Sky Striker Ace - Shizuku">
+                <img src="../images/engage.jpg" alt="Sky Striker Mobilize - Engage!" title="Sky Striker Mobilize - Engage!">
+                <img src="../images/kagari.jpg" alt="Sky Striker Ace - Kagari" title="Sky Striker Ace - Kagari">
+            </div>
+            <p>遊戯王のトレーディングカードゲームに登場する「閃刀姫(スカイ・ストライカー)」は、SFアニメに強く影響を受けたビジュアルが特徴で、高度なテクノロジーと未来的なデザインが際立っています。</p>
+            <br>
+            <p>カードのイラストは、中心となるキャラクターであるレイを軸に展開され、さまざまな機械装甲を装備することで形態や機能が変化します。それぞれの形態は異なるビジュアルスタイルを持ちながらも、エネルギーの翼や発光エフェクト、デジタル的な演出といった共通要素が見られます。</p>
+        </section>
+     </main>
+     <footer class="footer">
+        <p>João Pedro Trevisan  2026</p>
+        <p>Software Engineering - Integrado</p>
+     </footer>
+
+     <script>
+            const themeToggle = document.getElementById("theme-toggle");
+
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.body.classList.add("dark-theme");
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener("click", function () {
+                    document.body.classList.toggle("dark-theme");
+
+                    if (document.body.classList.contains("dark-theme")) {
+                        localStorage.setItem("theme", "dark");
+                    } else {
+                        localStorage.setItem("theme", "light");
+                    }
+                });
+            }
+        </script>
+</body>
+</html>
