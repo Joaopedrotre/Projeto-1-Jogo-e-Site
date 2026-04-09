@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,24 +25,24 @@
 <body>
     <!-- HEADER FIXO -->
     <header class="header">
-        <div class="logo"><a href="../index.html"><img src="../images/Logo.png" alt="Logo"></a></div>
+        <div class="logo"><a href="index-en.html"><img src="../images/Logo.png" alt="Logo"></a></div>
         <nav class="nav">
             <ul>
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="inspiration-pt-br.html">Inspirações</a></li>
-                <li><a href="howtoplay-pt-br.html">Como Jogar</a></li>
-                <li><a class="play" href="play-pt-br.html">Jogar Agora!</a></li>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="inspiration-en.html">Inspirations</a></li>
+                <li><a href="howtoplay-en.html">How to Play</a></li>
+                <li><a class="play" href="play-en.html">Play Now!</a></li>
             </ul>
         </nav>
 
         <div class="header-controls">
-            <button id="theme-toggle">Tema</button>
+            <button id="theme-toggle">Theme</button>
 
             <div class="lang">
                 <span class="globe">🌐</span>
                 <select onchange="location = this.value;">
+                    <option value="index-en.html">ENGLISH</option>
                     <option value="../index.html">PT-BR</option>
-                    <option value="../en/index-en.html">ENGLISH</option>
                     <option value="../ja/index-ja.html">日本語</option>
                 </select>
             </div>
@@ -51,19 +51,45 @@
     
     <!-- INDICADOR DE PÁGINA, JAPONÊS -->
     <div class="page-indicator">
-        プレー
+        遊び方
     </div>
 
     <!-- INTRODUÇÃO -->
      <main>
-        <section class="hero">
-            <h1>Seraph Project</h1>
-            <iframe width="100%" height="960" src=""></iframe>
-        </section>
+        <div class="container">
+            <section class="hero">
+                <img src="..//images/arrow keys.png" alt="Setas">
+                <div class="howtoplay">
+                    <h1>Movement</h1>
+                    <p>Move Yuna in up to 8 directions across the screen using the arrow keys to dodge enemy projectiles. Precise movement is essential, as even small decisions can make a huge difference when navigating through bullet patterns.</p>
+                </div>
+            </section>
+            <section class="hero">    
+                <img src="../images/z key.png" alt="Z">
+                <div class="howtoplay">
+                    <h1>Shooting</h1>
+                    <p>Yuna fires while holding the Z key. Use your attacks to hit XU-N5 and her drones, but remember: you won't always be able to deal damage to her while dodging. Survival always comes first.</p>
+                </div>
+            </section>
+            <section class="hero"> 
+                <img src="../images/shift key.png" alt="Modo Foco"> 
+                <div class="howtoplay">
+                    <h1>Focus Mode</h1>
+                    <p>Hold Shift to reduce movement speed, allowing for more precise dodging. Focus mode also reveals the character's hitbox, showing exactly how close you can get without being hit.</p>
+                </div>
+            </section>
+            <section class="hero"> 
+                <img class="x" src="../images/x key.png" alt="X">
+                <div class="howtoplay">
+                    <h1>Bombs</h1>
+                    <p>Bombs act as a limited emergency resource, clearing all projectiles on screen and dealing damage to XU-N5. Use them at the right moment to escape dangerous situations.</p>
+                </div>
+            </section>
+        </div>    
      </main>
      <footer class="footer">
         <p>João Pedro Trevisan  2026</p>
-        <p>Engenharia de Software - Integrado</p>
+        <p>Software Engineering - Integrado</p>
      </footer>
 
      <script>

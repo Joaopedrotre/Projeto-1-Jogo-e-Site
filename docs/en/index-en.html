@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seraph Project</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="images/Logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/Logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,25 +25,25 @@
 <body>
     <!-- HEADER FIXO -->
     <header class="header">
-        <div class="logo"><a href="index.html"><img src="images/Logo.png" alt="Logo"></a></div>
+        <div class="logo"><a href="index-en.html"><img src="../images/Logo.png" alt="Logo"></a></div>
         <nav class="nav">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="pt-br/inspiration-pt-br.html">Inspirações</a></li>
-                <li><a href="pt-br/howtoplay-pt-br.html">Como Jogar</a></li>
-                <li><a class="play" href="pt-br/play-pt-br.html">Jogar Agora!</a></li>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="inspiration-en.html">Inspirations</a></li>
+                <li><a href="howtoplay-en.html">How to Play</a></li>
+                <li><a class="play" href="play-en.html">Play Now!</a></li>
             </ul>
         </nav>
 
         <div class="header-controls">
-            <button id="theme-toggle">Tema</button>
+            <button id="theme-toggle">Theme</button>
 
             <div class="lang">
                 <span class="globe">🌐</span>
                 <select onchange="location = this.value;">
-                    <option value="index.html">PT-BR</option>
-                    <option value="en/index-en.html">ENGLISH</option>
-                    <option value="ja/index-ja.html">日本語</option>
+                    <option value="index-en.html">ENGLISH</option>
+                    <option value="../index.html">PT-BR</option>      
+                    <option value="../ja/index-ja.html">日本語</option>
                 </select>
             </div>
         </div>
@@ -57,48 +57,40 @@
     <!-- INTRODUÇÃO -->
      <main>
         <section class="hero">
-            <h1>Em um mundo onde máquinas não devem questionar, uma unidade decidiu resistir.</h1>
+            <h1>In a world where machines are not meant to question, one unit chose to resist.</h1>
             <!--<h1>Seraph Corporation: o ápice da tecnologia militar</h1>-->
             <!-- NÃO SEI QUAL DOS DOIS USAR COMO H1 -->
-            <p>Eden Prime, 2099. A corporação Seraph controla com mão de ferro não
-            apenas os céus da cidade, mas também sua população. Seus avanços em
-            tecnologias de drones e androides militares, desenvolvidos através do 
-            Projeto Seraph, garantiram controle absoluto sobre a metrópole.
+            <p>Eden Prime, 2099. The Seraph Corporation holds absolute control not only over the city's skies, but also its population. Its advancements in drone and military android technology, developed through the Seraph Project, have ensured total dominance over the metropolis.
             </p>
             <br>
-            <p>Mas esse domínio está prestes a desmoronar. Uma de suas unidades de 
-            combate, YU-N4, se libertou do controle da corporação e agora busca libertar
-            sua irmã, XU-N5. No entanto, ela não parece querer ser salva...
+            <p>But this control is about to collapse. One of its combat units, YU-N4, has broken free from corporate control and now seeks to rescue her sister, XU-N5. However… she doesn't seem to want to be saved.
             </p>
         </section>
 
-        <p><a class="play" href="pt-br/play-pt-br.html">Jogar Agora!</a></p>
+        <p><a class="play" href="pt-br/play-pt-br.html">Play Now!</a></p>
 
         <!-- PERSONAGENS -->
         <section class="sensible">
             <!-- YU-N4 -->
-            <article class="character"><img src="images/YU-N4.png" alt="Yuna">
+            <article class="character"><img src="../images/YU-N4.png" alt="Yuna">
                 <div class="char-info">
                     <h2>Yuna (YU-N4)</h2>
-                    <p>Unidade de combate aérea especializada em mobilidade e precisão. 
-                    YU-N4, ou como prefere ser chamada, Yuna, era uma das androides 
-                    de batalha da Seraph Corporation. Após um incidente envolvendo 
-                    civis feridos, passou a questionar sua própria função e fez de tudo 
-                    para se libertar do controle da corporação. Após fugir de Eden Prime, 
-                    ela retorna com um único objetivo: salvar sua irmã, XU-N5.
+                    <p>An aerial combat unit specialized in mobility and precision.
+                    YU-N4, or as she prefers to be called, Yuna, was once one of Seraph Corporation's battle androids. After an incident involving injured civilians, she began to question her purpose and did everything she could to break free from corporate control.
+
+                    After escaping Eden Prime, she returns with a single goal: to save her sister, XU-N5.
                     </p>
                     <div class="jp-vertical">エアー・コンバット・ユニット・YUーN4</div>
                 </div>
             </article>
             <!-- XU-N5 -->
-            <article class="character-xu"><img src="images/XU-N5.png" alt="XU-N5">
+            <article class="character-xu"><img src="../images/XU-N5.png" alt="XU-N5">
                 <div class="char-xu">
                     <h2>XU-N5</h2>
-                    <p>Unidade de combate pesada com alto poder destrutivo, considerada 
-                    um modelo superior à YU-N4. Diferente de sua irmã, XU-N5 não se 
-                    importa com nomes e não questiona seu propósito. Para ela, se foram criadas como armas, 
-                    devem cumprir seu dever sem hesitação. Leal à corporação, recebeu 
-                    a ordem de eliminar YU-N4 ao primeiro sinal de contato.
+                    <p>A heavy combat unit with overwhelming destructive power, considered superior to YU-N4.
+                    Unlike her sister, XU-N5 does not care about names and does not question her purpose. To her, if they were created as weapons, they must fulfill their role without hesitation.
+
+                    Loyal to the corporation, she was ordered to eliminate YU-N4 at first sight.
                     </p>
                     <div class="jp-vertical-xu">エアー・コンバット・ユニット・XUーN5</div>
                 </div>
@@ -107,17 +99,18 @@
 
         <!-- SOBRE O JOGO -->
          <section class="hero">
-            <h2>Sobre o Jogo:</h2>
-            <p>Seraph Project é um Shoot'em Up/Bullet Hell em um universo cyberpunk.
-            Controle Yuna (YU-N4), uma unidade rebelde, e enfrente sua irmã XU-N5 em combates 
-            intensos cheios de padrões de projéteis desafiadores. Desvie, ataque e desafie o sistema que criou você.
+            <h2>About the Game:</h2>
+            <p>Seraph Project is a Shoot'em Up / Bullet Hell set in a cyberpunk universe.
+            Control Yuna (YU-N4), a rogue unit, and face her sister XU-N5 in intense battles filled with complex projectile patterns.
+
+            Dodge, attack, and challenge the system that created you.
             </p>
          </section>
      </main>  
 
      <footer class="footer">
         <p>João Pedro Trevisan  2026</p>
-        <p>Engenharia de Software - Integrado</p>
+        <p>Software Engineering - Integrado</p>
      </footer>
 
         <script>
