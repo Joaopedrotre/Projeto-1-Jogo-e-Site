@@ -39,7 +39,7 @@ input {
 ========================= */
 :root {
     /* Core colors */
-    --color-primary: #00ffff  /*#00ffff: cor original, muito clara */;
+    --color-primary: #00b8cc  /*#00ffff: cor original, muito clara - #2979ff electric blue */;
     --color-secondary: #ff004c;
     --color-text: #1f2f46;
     --color-black: #000000;
@@ -69,7 +69,7 @@ input {
     --glass-blur-strong: 12px;
 
     /* Borders */
-    --border-primary: rgba(0, 255, 255, 0.60);
+    --border-primary: #00ffff;
     --border-primary-soft: rgba(0, 255, 255, 0.30);
     --border-primary-strong: rgba(0, 255, 255, 0.80);
     --border-secondary: rgba(255, 0, 76, 0.45);
@@ -466,7 +466,7 @@ main {
     text-orientation: upright;
     padding: 10px 5px;
     font-family: var(--font-title);
-    font-size: 28px;
+    font-size: 2.5rem;
     letter-spacing: 4px;
     color: var(--color-primary);
     font-weight: bold;
@@ -509,7 +509,7 @@ main {
     line-height: 1.8;
     color: var(--color-text);
     font-family: var(--font-body);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .touhou {
@@ -562,12 +562,12 @@ main {
 }
 
 .howtoplay h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .howtoplay p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 
@@ -627,11 +627,11 @@ main .play:hover {
 }
 
 .character {
-    border: 1px solid rgb(0, 255, 255, 0.30);
+    border: 1px solid #00ffff;
 }
 
 .character-xu {
-    border: 1px solid rgba(255, 0, 76, 0.45);
+    border: 1px solid #ff004c;
 }
 
 .character img,
@@ -656,11 +656,12 @@ main .play:hover {
 .char-xu h2 {
     margin-bottom: 16px;
     font-family: var(--font-title);
-    font-size: 1.7rem;
+    font-size: 2rem;
+    margin-top: 16px;
 }
 
 .char-info h2 {
-    color: rgb(0, 225, 255);
+    color: #00b8cc;
     text-shadow: var(--text-shadow-primary);
 }
 
@@ -673,23 +674,23 @@ main .play:hover {
 .char-xu p {
     line-height: 1.8;
     color: var(--color-text);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .jp-vertical,
 .jp-vertical-xu {
     position: absolute;
-    top: -128%;
+    top: -90%;
     right: -5px;
     writing-mode: vertical-rl;
     text-orientation: upright;
     font-family: var(--font-title);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     letter-spacing: 4px;
 }
 
 .jp-vertical {
-    color: rgb(0, 225, 255);
+    color: #00b8cc;
     text-shadow: var(--text-shadow-primary);
 }
 
