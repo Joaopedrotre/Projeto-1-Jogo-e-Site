@@ -926,6 +926,14 @@ main .play:hover {
         font-size: 0.9rem;
     }
 
+    .jp-vertical {
+        top: -85%;
+    }
+
+    .jp-vertical, .jp-vertical-xu {
+        font-size: 0.8rem;
+    }
+
     .footer {
         padding: 20px;
     }
