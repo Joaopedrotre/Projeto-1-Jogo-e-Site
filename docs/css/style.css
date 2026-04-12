@@ -39,7 +39,7 @@ input {
 ========================= */
 :root {
     /* Core colors */
-    --color-primary: #00b8cc  /*#00ffff: cor original, muito clara - #2979ff electric blue */;
+    --color-primary: #00b8cc;  /* #00ffff: cor original, muito clara - #2979ff electric blue - cor de teste, muito escura */
     --color-secondary: #ff004c;
     --color-text: #1f2f46;
     --color-black: #000000;
@@ -238,7 +238,7 @@ main {
 }
 
 /* =========================
-   REUSABLE COMPONENTS
+   COMPONENTS
 ========================= */
 .panel {
     background: var(--glass-bg);
@@ -394,17 +394,6 @@ main {
     box-shadow: var(--shadow-secondary-strong);
 }
 
-/* #theme-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    box-shadow: var(--shadow-primary);
-} BOTÃO TEMA ANTIGO */
-
 .header-controls {
     display: flex;
     align-items: center;
@@ -523,7 +512,7 @@ main {
 }
 
 /* =========================
-   STORY
+   HERO
 ========================= */
 .hero {
     max-width: 1000px;
@@ -644,7 +633,7 @@ main .play:hover {
    CHARACTERS
 ========================= */
 
-.sensible {
+.sensible {    /* BORRAR TELA QUANDO USUÁRIO É MENOR DE IDADE */
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -790,19 +779,53 @@ main .play:hover {
     }
 
     .header {
-        padding: 12px 15px;
+        height: auto;
+        padding: 6px 9px;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .header-controls {
+        gap: 5px;
     }
 
     .logo img {
-        width: 180px;
+        width: 170px;
     }
 
     .nav {
         display: none;
+        display: block;
+        width: 100%;
+        order: 3;
+        overflow-x: auto;
+    }
+
+    .nav ul {
+        gap: 5px;
+        justify-content: flex-start;
+        min-width: max-content;
+        padding-bottom: 4px;
+    }
+
+    .nav a {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+
+    .nav a.play {
+        margin-left: 0;
+        transform: none;
     }
 
     .lang {
         transform: scale(0.9);
+    }
+
+    .lang select,
+    #theme-toggle {
+        padding: 8px 12px;
+        font-size: 0.75rem;
     }
 
     .page-indicator {
@@ -821,9 +844,44 @@ main .play:hover {
         font-size: 0.95rem;
     }
 
+    .touhou img {
+        width: 110px;
+        height: auto;
+        margin: 3px;
+    }
+
+    .yugioh img {
+        width: 110px;
+        height: auto;
+        margin: 3px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .container .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container .hero img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .howtoplay h1 {
+        font-size: 1.6rem;
+    }
+
+    .howtoplay p {
+        font-size: 1rem;
+    }
+
     .play {
         padding: 12px 20px;
         font-size: 0.9rem;
+        transform: scale(1.1);
     }
 
     .sensible {
@@ -849,10 +907,7 @@ main .play:hover {
     .char-xu {
         padding-right: 0;
     }
-
-    .jp-vertical,
-    .jp-vertical-xu {
-        position: static;
+    .main .play:hover {
         writing-mode: horizontal-tb;
         text-orientation: initial;
         font-size: 0.7rem;
