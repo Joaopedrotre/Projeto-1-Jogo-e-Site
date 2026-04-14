@@ -1374,6 +1374,11 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpObject("ShotRight");
 		},
 		() => 1,
+		() => 100,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("", v0.GetValue());
+		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (f0(0) / 2);
@@ -1394,7 +1399,9 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() + 25);
-		}
+		},
+		() => 50,
+		() => 120
 ];
 
 

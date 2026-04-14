@@ -2,7 +2,7 @@
 
 const scriptsInEvents = {
 
-	async EventSheetMain_Event8_Act4(runtime, localVars)
+	async EventSheetMain_Event8_Act3(runtime, localVars)
 	{
 		const player = runtime.objects.Player.getFirstInstance();
 		if (!player) return;

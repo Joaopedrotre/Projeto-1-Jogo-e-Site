@@ -28,7 +28,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
-		C3.JavaScriptInEvents.EventSheetMain_Event8_Act4,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Text.Acts.SetText,
+		C3.JavaScriptInEvents.EventSheetMain_Event8_Act3,
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.System.Exps.viewportwidth,
 		C3.Plugins.System.Exps.viewportheight,
@@ -36,14 +38,21 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Sprite.Exps.X,
-		C3.Plugins.Sprite.Exps.Y
+		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.Sprite.Cnds.IsOverlapping,
+		C3.Plugins.Sprite.Acts.SetInstanceVar,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Plugins.Sprite.Acts.SetBoolInstanceVar
 	];
 };
 self.C3_JsPropNameTable = [
 	{Sprite: 0},
 	{Background: 0},
 	{Lives: 0},
+	{Bombs: 0},
 	{Invincible: 0},
+	{IsBombing: 0},
+	{BombTimer: 0},
 	{"8Direction": 0},
 	{BoundTo: 0},
 	{Player: 0},
@@ -62,8 +71,8 @@ self.C3_JsPropNameTable = [
 	{Bomb3: 0},
 	{Heart2: 0},
 	{Heart3: 0},
-	{Score: 0},
-	{Graze: 0},
+	{ScoreText: 0},
+	{GrazeText: 0},
 	{HP: 0},
 	{Enemy: 0},
 	{TiledBackground: 0},
@@ -75,8 +84,12 @@ self.C3_JsPropNameTable = [
 	{DestroyOutside: 0},
 	{PlayerBullet: 0},
 	{Sprite4: 0},
+	{Grazed: 0},
 	{EnemyBullet: 0},
-	{FireCooldown: 0}
+	{GrazeBox: 0},
+	{FireCooldown: 0},
+	{Score: 0},
+	{Graze: 0}
 ];
 
 self.InstanceType = {
@@ -97,8 +110,8 @@ self.InstanceType = {
 	Bomb3: class extends self.ISpriteInstance {},
 	Heart2: class extends self.ISpriteInstance {},
 	Heart3: class extends self.ISpriteInstance {},
-	Score: class extends self.ITextInstance {},
-	Graze: class extends self.ITextInstance {},
+	ScoreText: class extends self.ITextInstance {},
+	GrazeText: class extends self.ITextInstance {},
 	Enemy: class extends self.ISpriteInstance {},
 	TiledBackground: class extends self.ITiledBackgroundInstance {},
 	HUD2: class extends self.ITiledBackgroundInstance {},
@@ -107,5 +120,6 @@ self.InstanceType = {
 	Sprite3: class extends self.ISpriteInstance {},
 	PlayerBullet: class extends self.ISpriteInstance {},
 	Sprite4: class extends self.ISpriteInstance {},
-	EnemyBullet: class extends self.ISpriteInstance {}
+	EnemyBullet: class extends self.ISpriteInstance {},
+	GrazeBox: class extends self.ISpriteInstance {}
 }
