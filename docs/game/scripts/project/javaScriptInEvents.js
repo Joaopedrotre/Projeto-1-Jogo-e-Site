@@ -33,6 +33,27 @@ const scriptsInEvents = {
 		
 		const bullet = runtime.objects.EnemyBullet.getFirstPickedInstance();
 		if (bullet) bullet.destroy();
+	},
+
+	async EventSheetMain_Event12_Act2(runtime, localVars)
+	{
+		const player = runtime.objects.Player.getFirstInstance();
+		if (!player) return;
+		
+		const bombs = player.instVars.Bombs;
+		
+		if (bombs === 2) {
+		    const bomb3 = runtime.objects.Bomb3.getFirstInstance();
+		    if (bomb3) bomb3.destroy();
+		}
+		else if (bombs === 1) {
+		    const bomb2 = runtime.objects.Bomb2.getFirstInstance();
+		    if (bomb2) bomb2.destroy();
+		}
+		else if (bombs === 0) {
+		    const bomb1 = runtime.objects.Bomb.getFirstInstance();
+		    if (bomb1) bomb1.destroy();
+		}
 	}
 };
 
