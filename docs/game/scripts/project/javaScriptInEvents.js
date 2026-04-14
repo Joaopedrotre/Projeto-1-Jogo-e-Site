@@ -2,7 +2,7 @@
 
 const scriptsInEvents = {
 
-	async EventSheetMain_Event8_Act3(runtime, localVars)
+	async EventSheetMain_Event14_Act3(runtime, localVars)
 	{
 		const player = runtime.objects.Player.getFirstInstance();
 		if (!player) return;
@@ -35,7 +35,7 @@ const scriptsInEvents = {
 		if (bullet) bullet.destroy();
 	},
 
-	async EventSheetMain_Event12_Act2(runtime, localVars)
+	async EventSheetMain_Event19_Act2(runtime, localVars)
 	{
 		const player = runtime.objects.Player.getFirstInstance();
 		if (!player) return;
