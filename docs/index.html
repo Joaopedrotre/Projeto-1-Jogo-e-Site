@@ -112,6 +112,12 @@
             Controle Yuna (YU-N4), uma unidade rebelde, e enfrente sua irmã XU-N5 em combates 
             intensos cheios de padrões de projéteis desafiadores. Desvie, ataque e desafie o sistema que criou você.
             </p>
+            <br>
+            <p><strong>Gênero:</strong> <span id="info-gen"></span></p>
+            <p><strong>Plataforma:</strong> <span id="info-plat"></span></p>
+            <p><strong>Preço:</strong> <span id="info-preco"></span></p>
+            <p><strong>Classificação:</strong> <span id="info-etaria"></span></p>
+            <p><strong>Desenvolvedor:</strong> <span id="info-dev"></span></p>
          </section>
      </main>  
 
@@ -119,6 +125,21 @@
         <p>João Pedro Trevisan  2026</p>
         <p>Engenharia de Software - Integrado</p>
      </footer>
+        
+        <script>
+        const nomeJogo = "Seraph Project";
+        const devJogo = "João Pedro Trevisan";
+        const genJogo = "Shoot'em Up/Bullet Hell";
+        const platJogo = "PC e Web";
+        const precoJogo = "Grátis";
+        const classJogo = "18 Anos";
+
+        document.getElementById("info-dev").innerText = devJogo;
+        document.getElementById("info-gen").innerText = genJogo;
+        document.getElementById("info-plat").innerText = platJogo;
+        document.getElementById("info-preco").innerText = precoJogo;
+        document.getElementById("info-etaria").innerText = classJogo;
+        </script>
 
         <script>
             const themeToggle = document.getElementById("theme-toggle");

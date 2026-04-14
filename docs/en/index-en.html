@@ -105,6 +105,12 @@
 
             Dodge, attack, and challenge the system that created you.
             </p>
+            <br>
+            <p><strong>Gender:</strong> <span id="info-gen"></span></p>
+            <p><strong>Platform:</strong> <span id="info-plat"></span></p>
+            <p><strong>Price:</strong> <span id="info-preco"></span></p>
+            <p><strong>Rating:</strong> <span id="info-etaria"></span></p>
+            <p><strong>Developer:</strong> <span id="info-dev"></span></p>
          </section>
      </main>  
 
@@ -112,6 +118,21 @@
         <p>João Pedro Trevisan  2026</p>
         <p>Software Engineering - Integrado</p>
      </footer>
+
+        <script>
+        const nomeJogo = "Seraph Project";
+        const devJogo = "João Pedro Trevisan";
+        const genJogo = "Shoot'em Up/Bullet Hell";
+        const platJogo = "PC and Web";
+        const precoJogo = "Free";
+        const classJogo = "18 Years";
+
+        document.getElementById("info-dev").innerText = devJogo;
+        document.getElementById("info-gen").innerText = genJogo;
+        document.getElementById("info-plat").innerText = platJogo;
+        document.getElementById("info-preco").innerText = precoJogo;
+        document.getElementById("info-etaria").innerText = classJogo;
+        </script>
 
         <script>
             const themeToggle = document.getElementById("theme-toggle");

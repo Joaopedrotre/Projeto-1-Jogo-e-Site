@@ -100,6 +100,12 @@
 
             複雑な弾幕をかわし、攻撃し、そして自らを生み出したシステムに立ち向かえ。
             </p>
+            <br>
+            <p><strong>ジャンル：</strong> <span id="info-gen"></span></p>
+            <p><strong>プラットフォーム：</strong> <span id="info-plat"></span></p>
+            <p><strong>価格：</strong> <span id="info-preco"></span></p>
+            <p><strong>年齢区分：</strong> <span id="info-etaria"></span></p>
+            <p><strong>開発者：</strong> <span id="info-dev"></span></p>
          </section>
      </main>  
 
@@ -107,6 +113,21 @@
         <p>João Pedro Trevisan  2026</p>
         <p>Software Engineering - Integrado</p>
      </footer>
+
+        <script>
+        const nomeJogo = "Seraph Project";
+        const devJogo = "João Pedro Trevisan";
+        const genJogo = "シューティング／弾幕ゲーム";
+        const platJogo = "PC・Web";
+        const precoJogo = "無料";
+        const classJogo = "18歳以上";
+
+        document.getElementById("info-dev").innerText = devJogo;
+        document.getElementById("info-gen").innerText = genJogo;
+        document.getElementById("info-plat").innerText = platJogo;
+        document.getElementById("info-preco").innerText = precoJogo;
+        document.getElementById("info-etaria").innerText = classJogo;
+        </script>
 
         <script>
             const themeToggle = document.getElementById("theme-toggle");
