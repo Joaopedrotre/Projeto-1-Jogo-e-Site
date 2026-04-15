@@ -16,9 +16,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.destroy,
 		C3.Behaviors.Pin,
 		C3.Plugins.Audio,
-		C3.Plugins.Keyboard.Cnds.OnKey,
-		C3.Plugins.System.Acts.RestartLayout,
-		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Acts.SetVisible,
@@ -40,6 +37,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.TiledBg.Acts.MoveToTop,
 		C3.Plugins.Sprite.Acts.SetWidth,
 		C3.Plugins.System.Exps.max,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.Keyboard.Cnds.OnKeyReleased,
 		C3.Plugins.Keyboard.Cnds.IsKeyDown,
 		C3.Plugins.System.Cnds.Compare,
@@ -139,6 +139,7 @@ self.C3_JsPropNameTable = [
 	{BossHP: 0},
 	{Text: 0},
 	{TiledBackground2: 0},
+	{BossHurt: 0},
 	{FireCooldown: 0},
 	{Score: 0},
 	{Graze: 0}
@@ -186,5 +187,6 @@ self.InstanceType = {
 	EnemyExplosion: class extends self.ISpriteInstance {},
 	BossHP: class extends self.ISpriteInstance {},
 	Text: class extends self.ITextInstance {},
-	TiledBackground2: class extends self.ITiledBackgroundInstance {}
+	TiledBackground2: class extends self.ITiledBackgroundInstance {},
+	BossHurt: class extends self.ISpriteInstance {}
 }
