@@ -1382,20 +1382,29 @@ function or(l, r)
 }
 
 self.C3_ExpressionFuncs = [
+		() => 0,
+		() => "",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
 		() => "EnemyFlyRight",
-		() => 1.5,
-		() => "Shoot",
-		() => 0,
-		() => "",
+		() => 1.6,
+		() => "Radial",
+		() => "Spread",
+		() => "Spiral",
+		() => 0.1,
+		() => "FireRate",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
-		() => 1,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const n1 = p._GetNode(1);
+			const n2 = p._GetNode(2);
+			return () => f0(0, ((n1.ExpInstVar() / n2.ExpInstVar()) * 480));
+		},
 		() => "FlyRight",
 		() => "FlyLeft",
 		() => "Idle",
@@ -1414,7 +1423,7 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpObject("ShotRight");
 		},
 		() => -15,
-		() => 0.1,
+		() => 1,
 		() => 0.001,
 		() => 10000,
 		p => {
@@ -1422,15 +1431,29 @@ self.C3_ExpressionFuncs = [
 			return () => and("", v0.GetValue());
 		},
 		() => 5000,
-		() => 120,
+		() => 2,
+		() => "BombTimer",
 		() => 50,
 		() => 25,
 		() => 125,
 		() => 250,
-		() => 32,
+		() => -5,
+		() => 340,
+		() => 620,
+		() => "Invincible",
+		() => 20,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => (0 + (f0() * (360 / 32)));
+			return () => (0 + (f0() * (360 / 20)));
+		},
+		() => 10,
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			const n2 = p._GetNode(2);
+			const n3 = p._GetNode(3);
+			const f4 = p._GetNode(4).GetBoundMethod();
+			return () => ((C3.toDegrees(C3.angleTo(n0.ExpObject(), n1.ExpObject(), n2.ExpObject(), n3.ExpObject())) - 40) + (f4() * (80 / 10)));
 		},
 		p => {
 			const n0 = p._GetNode(0);
@@ -1441,13 +1464,8 @@ self.C3_ExpressionFuncs = [
 			return () => (n0.ExpInstVar() - 0.1);
 		},
 		() => "EnemyFlyLeft",
-		() => 0.7,
-		() => -5,
-		() => 340,
-		() => 620,
-		() => 2,
-		() => 300,
-		() => -10
+		() => -10,
+		() => 0.7
 ];
 
 
