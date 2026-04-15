@@ -26,7 +26,10 @@
     <!-- HEADER FIXO -->
     <header class="header">
         <div class="logo"><a href="index-ja.html"><img src="../images/Logo.png" alt="Logo"></a></div>
-        <nav class="nav">
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open Menu">☰</button>
+
+        <nav class="nav" id="main-nav">
             <ul>
                 <li><a href="index-ja.html">ホーム</a></li>
                 <li><a href="inspiration-ja.html">インスピレーション</a></li>
@@ -59,6 +62,7 @@
         <section class="hero">
             <h1>セラフ・プロジェクト</h1>
             <p><a class="play-now" href="../game/index.html" target="_blank">新しいタブでゲームを開く →</a></p>
+            <p class="mobile-warning">このゲームはモバイルではプレイできません。</p>
             <!-- <iframe width="720" height="960" src="../game/index.html"></iframe> -->
         </section>
      </main>
@@ -66,6 +70,15 @@
         <p>João Pedro Trevisan  2026</p>
         <p>Software Engineering - Integrado</p>
      </footer>
+
+     <script>
+            const menuToggle = document.getElementById("menu-toggle");
+            const mainNav = document.getElementById("main-nav");
+
+            menuToggle.addEventListener("click", function () {
+                mainNav.classList.toggle("active");
+            });
+        </script>
 
      <script>
             const themeToggle = document.getElementById("theme-toggle");
